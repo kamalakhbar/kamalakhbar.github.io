@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Nunito:wght@200;300;400;600;700&display=swap");
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none !important;
+  -webkit-transform: all .2s linear;
+          transform: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #F6973F;
+}
+
+section {
+  padding: 5rem 1rem;
+}
+
+.header {
+  z-index: 1000;
+  padding: 4rem 0;
+}
+
+.header.active {
+  padding: 2rem 0;
+  background: #F6973F;
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.header .nav a {
+  font-size: 2rem;
+  margin-left: 5rem;
+  color: #fff;
+}
+
+.header .nav a:hover {
+  text-decoration: underline !important;
+  text-underline-offset: .5rem;
+}
+
+.header .icons div {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.header #menu-btn {
+  display: none;
+}
+
+.home {
+  background: url("../image/back1.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 1.3;
+}
+
+.home h3 {
+  text-align: center;
+  padding-top: 15rem;
+  font-size: 5.5rem;
+  color: #fff;
+}
+
+.home p {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.home a {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.Hotbg {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: transparent;
+  height: 60px;
+  border-radius: 40px;
+  border-style: solid;
+  border-color: #F6973F;
+  padding: 10px;
+}
+
+.Hotbg:hover > .Hotbg-txt {
+  width: 240px;
+  padding: 0 6px;
+}
+
+.Hotbg:hover > .Hotbg-btn {
+  background: #F6973F;
+  color: white;
+}
+
+.Hotbg-btn {
+  color: #e84118;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #F6973F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  color: azure;
+  cursor: pointer;
+}
+
+.Hotbg-btn > i {
+  font-size-adjust: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.Hotbg-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: azure;
+  font-size: 16px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+  font-weight: bold;
+}
+
+.about h3 {
+  font-size: 3.5rem;
+  color: #222;
+  font-weight: bold;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  color: #222;
+  font-weight: bold;
+}
+
+.about p {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  color: #222;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #666;
+}
+
+.about a {
+  font-size: 1.5rem;
+  color: #F6973F;
+}
+
+.experience span {
+  font-size: 1.5rem;
+  color: #F6973F;
+}
+
+.experience .title {
+  padding-top: 1rem;
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: #222;
+  font-weight: bold;
+}
+
+.experience p {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #666;
+}
+
+.experience a {
+  font-size: 1.5rem;
+  color: #F6973F;
+}
+
+.materials span {
+  font-size: 1.5rem;
+  color: #F6973F;
+}
+
+.materials .title {
+  padding-top: 1rem;
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: #222;
+  font-weight: bold;
+}
+
+.materials p {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #666;
+}
+
+.materials a {
+  font-size: 1.5rem;
+  color: #F6973F;
+}
+
+.shop h3 {
+  font-size: 3.5rem;
+  color: #222;
+  font-weight: bold;
+  text-align: center;
+}
+
+.shop .shop-slider {
+  padding: 1rem;
+  padding-bottom: 4rem;
+}
+
+.shop .shop-slider .box {
+  text-align: center;
+  padding: 2rem;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  border: var(--border);
+  border-radius: .5rem;
+}
+
+.shop .shop-slider .box img {
+  height: 15rem;
+}
+
+.shop .shop-slider .box:hover img {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.shop .shop-slider .box h3 {
+  font-size: 2.2rem;
+  color: var(--black);
+}
+
+.shop .shop-slider .box .stars {
+  padding: 1rem 0;
+}
+
+.shop .shop-slider .box .stars i {
+  font-size: 1.7rem;
+  color: #F6973F;
+}
+
+.shop .shop-slider .box .price {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+.footer {
+  background: #F7F7F7;
+}
+
+.footer .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container h3 {
+  color: #F6973F;
+  font-size: 1.4rem;
+  padding: 1rem 0;
+}
+
+.footer .box-container p {
+  color: #1E1E1E;
+  font-size: 1.4rem;
+  display: block;
+  padding: 1rem 0;
+}
+
+.footer .box-container a {
+  color: #1E1E1E;
+  font-size: 1.4rem;
+  display: block;
+  padding: 1rem 0;
+}
+
+.footer .box-container a i {
+  padding-right: .5rem;
+  color: #1E1E1E;
+}
+
+.footer .box-container a:hover i {
+  padding-right: 2rem;
+}
+
+@media (max-widht: 991px) {
+  html {
+    font-size: 55%;
+    scroll-padding-top: 8rem;
+  }
+  .home h3 {
+    font-size: 4rem;
+  }
+  section {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 4rem 2rem;
+  }
+  .header.active {
+    padding: 2rem;
+  }
+  .header #menu-btn {
+    display: inline-block;
+  }
+  .header #menu-btn.fa-times {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .header .nav {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    padding: 1rem 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .nav.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .nav a {
+    margin: 1rem 2rem;
+    color: #222;
+  }
+  .Hotbg {
+    top: 80%;
+  }
+}
+
+@media (max-widht: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

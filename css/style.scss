@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Nunito:wght@200;300;400;600;700&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none !important;
+    transform: all .2s linear;
+
+}
+
+$main-color: #F6973F;
+$black: #222;
+$white: #fff;
+$light-color: #666;
+$light-bg: #eee;
+$border:.1rem solid $main-color;
+$box-shadow:0.5 1rem rgba(0,0,0,.1);
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap:2rem
+}
+
+@mixin title-text($titleSize) {
+    font-size: $titleSize;
+    text-transform: capitalize;
+    color: $black;
+}
+
+@mixin graph-text($graphSize) {
+    font-size: $graphSize;
+    line-height: 2;
+    color: $light-color;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+
+    &::-webkit-scrollbar{
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track{
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: $main-color;
+    }
+}
+
+section{
+    padding: 5rem 1rem;
+}
+
+.header{
+    z-index: 1000;
+    padding: 4rem 0;
+
+    &.active{
+        padding:2rem 0;
+        background: $main-color;
+    }
+
+    .logo{
+        font-size: 2.5rem;
+        color: $white;
+        font-weight: bolder;
+    }
+
+    .nav{
+        a{
+            font-size: 2rem;
+            margin-left: 5rem;
+            color:$white;
+
+            &:hover{
+                text-decoration: underline !important;
+                text-underline-offset: .5rem;
+            }
+        }
+    }
+
+    .icons div{
+        font-size: 2.5rem;
+        color:$white;
+        margin-left: 2rem;
+        cursor: pointer;
+    }
+
+    #menu-btn{
+        display: none;
+    }
+}
+
+.home{
+    background: url('../image/back1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 1.3;
+
+    h3{
+        text-align: center;
+        padding-top: 15rem;
+        font-size: 5.5rem;
+        color: $white;
+    }
+
+    p{
+        text-align: center;
+        font-size: 2rem;
+        color: $white;
+    }
+
+    a{
+        text-align: center;
+        font-size: 2rem;
+        color: $white;
+    }
+}
+
+.Hotbg
+{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    height: 60px;
+    border-radius: 40px;
+    border-style: solid;
+    border-color: $main-color;
+    padding: 10px;
+}
+
+.Hotbg:hover > .Hotbg-txt
+{
+    width: 240px;
+    padding: 0 6px;
+}
+
+.Hotbg:hover > .Hotbg-btn
+{
+    background: $main-color;
+    color: white;
+}
+
+.Hotbg-btn
+{
+    color: #e84118;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    color: azure;
+    cursor: pointer;
+}
+
+.Hotbg-btn > i
+{
+    font-size-adjust: 30px;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.Hotbg-txt
+{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: azure;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    font-weight: bold;
+}
+
+.about{
+    h3{
+        font-size: 3.5rem;
+        color: $black;
+        font-weight: bold;
+    }
+
+    h1{
+        font-size: 2.5rem;
+        color: $black;
+        font-weight: bold;
+    }
+
+    p{
+        padding: 1rem 0;
+        font-size: 1.5rem;
+        color: $black;
+        @include graph-text(1.5rem);
+    }
+
+    a{
+        font-size: 1.5rem;
+        color: $main-color;
+    }
+}
+
+.experience{
+    span{
+        font-size: 1.5rem;
+        color: $main-color;
+    }
+
+    .title{
+        padding-top: 1rem;
+        @include title-text(3rem);
+        font-weight: bold;
+    }
+
+    p{
+        padding: 1rem 0;
+        @include graph-text(1.5rem);
+    }
+
+    a{
+        font-size: 1.5rem;
+        color: $main-color;
+    }
+}
+
+.materials{
+    span{
+        font-size: 1.5rem;
+        color: $main-color;
+    }
+
+    .title{
+        padding-top: 1rem;
+        @include title-text(3rem);
+        font-weight: bold;
+    }
+
+    p{
+        padding: 1rem 0;
+        @include graph-text(1.5rem);
+    }
+
+    a{
+        font-size: 1.5rem;
+        color: $main-color;
+    }
+}
+  
+.shop{
+    h3{
+        font-size: 3.5rem;
+        color: $black;
+        font-weight: bold;
+        text-align: center;
+    }
+    .shop-slider{
+        padding: 1rem;
+        padding-bottom: 4rem;
+    }
+
+    .shop-slider .box{
+        text-align: center;
+        padding: 2rem;
+        box-shadow: var(--box-shadow);
+        border: var(--border);
+        border-radius: .5rem;
+    }
+
+    .shop-slider .box img{
+        height: 15rem;
+    }
+
+    .shop-slider .box:hover img{
+        transform: scale(.9);
+    }
+
+    .shop-slider .box h3{
+        font-size: 2.2rem;
+        color: var(--black);
+    }
+
+    .shop-slider .box .stars{
+        padding: 1rem 0;
+        
+    }
+
+    .shop-slider .box .stars i{
+        font-size: 1.7rem;
+        color: $main-color;
+    }
+
+    .shop-slider .box .price{
+        font-size: 2.5rem;
+        color: var(--black);
+    }
+}
+
+.footer{
+    background: #F7F7F7;
+    .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap:1.5rem;
+
+        h3{
+            color: $main-color;
+            font-size: 1.4rem;
+            padding: 1rem 0;
+        }
+
+        p{
+            color: #1E1E1E;
+            font-size: 1.4rem;
+            display: block;
+            padding: 1rem 0;
+        }
+
+        a{
+            color: #1E1E1E;
+            font-size: 1.4rem;
+            display: block;
+            padding: 1rem 0;
+
+            i{
+                padding-right: .5rem;
+                color: #1E1E1E;
+            }
+        }
+
+        a:hover i{
+            padding-right: 2rem;
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-widht:991px){
+    html{
+        font-size: 55%;
+        scroll-padding-top: 8rem;
+    }
+
+    .home h3{
+        font-size: 4rem;
+    }
+
+    section{
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width:768px){
+    .header{
+        padding:4rem 2rem;
+
+        &.active{
+            padding: 2rem;
+        }
+
+        #menu-btn{
+            display: inline-block;
+
+            &.fa-times{
+                transform: rotate(180deg);
+            }
+
+        }
+
+        .nav{
+            position: absolute;
+            top: 99%; left: 0; right: 0;
+            background: $white;
+            flex-flow: column;
+            padding: 1rem 0;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            &.active{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+            a{
+                margin: 1rem 2rem;
+                color: $black;
+            }
+        }
+    }
+
+    .Hotbg{
+        top: 80%;        
+    }
+
+    
+}
+
+@media (max-widht:450px){
+    html{
+        font-size: 50%;
+    }
+}
